@@ -1,0 +1,49 @@
+.about {
+	position: relative;
+	z-index: 2;
+	color: white;
+	background: black url('../img/@ny/about/bg.jpg') no-repeat 50% 100% / cover;
+	padding: 267px 0 224px;
+
+	&:before {
+		content: '';
+		width: 539px;
+		height: 772px;
+		position: absolute;
+		bottom: -80px;
+		right: -129px;
+		z-index: -1;
+		background: --my-url-lines() no-repeat 0 0 / 100% auto;
+	}
+
+	&__title {
+		font-size: 42px;
+		line-height: 1;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 36px;
+		line-height: 1;
+		margin-bottom: 30px;
+	}
+
+	&__link {
+		color: red;
+		text-transform: uppercase;
+	}
+
+	&__button {
+		display: flex;
+		width: 146px;
+		height: 146px;
+		background: red;
+		border-radius: 50%;
+		margin-bottom: 18px;
+
+		i {
+			font-size: 83px;
+		}
+	} // &__button
+
+}

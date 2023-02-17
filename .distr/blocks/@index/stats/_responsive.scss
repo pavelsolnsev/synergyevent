@@ -1,0 +1,64 @@
+.stats {
+
+	@include media-tablet() {
+		background: --my-bg-dot(16% 330px), --my-bg-dot(94% 154px), url('../img/@index/stats/bg_t.jpg') no-repeat 50% 0 / 100% auto, $grey;
+		padding: 222px 0 170px;
+
+		&__items {
+			max-width: $width-tablet;
+			background: none;
+		}
+
+		&__item {
+			$item: &;
+			display: flex;
+			width: 253px;
+			height: 253px;
+			background-color: transparentize($grey, 0.15) !important;
+			border-radius: 50%;
+
+			&_1 { margin: 44px 0 0 -82px; }
+			&_2 { margin: 44px 0 0 -30px; }
+			&_3 { margin: 0 0 0 -75px; padding-left: 0px; width: 340px; height: 340px; }
+			&_4 { margin: 44px 0 0 -75px; }
+			&_5 { margin: 44px -110px 0 -30px; padding-right: 50px; }
+			&_6 { margin: -86px -27px 0 auto; background: --my-bg-circle(0 0, 100%, $width-mobile, 70, '', #FFFFFF); }
+			&_7 { margin: -86px auto 0 -27px; background: --my-bg-circle(0 0, 100%, $width-mobile, 190, '', #FFFFFF); }
+		} // &__item
+
+	} // tablet
+
+
+	@include media-desktop() {
+		background: --my-bg-dot(23% 510px, 48px), --my-bg-dot(84% 240px, 48px), url('../img/@index/stats/bg_d.jpg') no-repeat 50% 0 / auto, $grey;
+		padding: 339px 0 260px;
+
+		&__items {
+			max-width: none;
+		}
+
+		&__item {
+			$item: &;
+			width: 386px;
+			height: 386px;
+
+			&_1 { margin: 67px 0 0 -140px; }
+			&_2 { margin: 67px 0 0 -48px; }
+			&_3 { margin: 0 0 0 -115px; padding-left: 0px; width: 520px; height: 520px; }
+			&_4 { margin: 67px 0 0 -115px; }
+			&_5 { margin: 67px -200px 0 -48px; padding-right: 50px; }
+			&_6 { margin: -133px -41px 0 auto; background: --my-bg-circle(0 0, 100%, $width-mobile, 70, '', #FFFFFF); }
+			&_7 { margin: -133px auto 0 -41px; background: --my-bg-circle(0 0, 100%, $width-mobile, 190, '', #FFFFFF); }
+
+			&-num {
+				font-size: 56px;
+
+				#{$item}_3 & {
+					font-size: 120px;
+				}
+			} // &-num
+		} // &__item
+
+	} // desktop
+
+}

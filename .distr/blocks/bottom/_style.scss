@@ -1,0 +1,41 @@
+.bottom {
+	color: white;
+	background: --my-bg-circle(14% 58vw, 209px, $width-mobile, 160), --my-bg-circle(8% 16vw, 230px, $width-mobile, 10), --my-bg-circle(85% 41vw, 209px, $width-mobile, 60), url('../img/bottom/bg.jpg') no-repeat 50% 0% / 100% auto, $grey;
+	padding-top: 195px;
+
+	&__title {
+		text-align: center;
+		line-height: 1;
+		margin-bottom: 82px;
+	}
+
+	&__contacts {
+		padding-top: 104px;
+
+		a {
+			text-decoration: underline;
+		}
+
+		&-phone {
+			font-size: 46px;
+			line-height: 131%;
+			letter-spacing: -0.04em;
+			margin-bottom: 10px;
+
+			a {
+				text-decoration: none;
+			}
+		} // &-phone
+
+		&-email {
+			font-size: 36.6211px;
+			line-height: 1;
+			margin-bottom: 29px;
+		}
+
+		&-address {
+			text-transform: uppercase;
+		}
+	} // &__contacts
+
+}

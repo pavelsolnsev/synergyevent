@@ -1,0 +1,8 @@
+<svg width="304" height="304" viewBox="0 0 304 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="152" cy="152" r="150" stroke-width="1" stroke="#3D3D3D" fill="none" vector-effect="non-scaling-stroke"></circle>
+	<g transform="rotate(0, 152, 152)">
+		<path d="M 288 89 A 150 150 0 0 1 288 215" stroke-width="2" stroke="#FFFFFF" vector-effect="non-scaling-stroke">
+			<animateTransform attributeName="transform" type="rotate" dur="7s" from="0 152 152" to="360 152 152" repeatCount="indefinite"></animateTransform>
+		</path>
+	</g>
+</svg>

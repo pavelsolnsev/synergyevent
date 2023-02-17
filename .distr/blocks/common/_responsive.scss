@@ -1,0 +1,37 @@
+@import '_variables';
+
+
+/* ******* */
+/* Layout */
+
+@include media-tablet() {
+
+	.container {
+		max-width: 952+30px;
+	}
+
+} // tablet
+
+
+@include media-desktop() {
+
+	body {
+		font-size: 20px;
+	}
+
+	.container {
+		max-width: 1457+30px;
+	}
+
+} // desktop
+
+
+
+/***********/
+/* Common */
+
+/* Forms */
+@import 'form/_responsive';
+
+/* Carousel */
+@import 'slick/_responsive';

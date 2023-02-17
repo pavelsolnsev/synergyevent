@@ -1,0 +1,30 @@
+.about {
+	position: relative;
+	z-index: -1;
+	color: white;
+	background: black url('../img/@cases/about/bg.jpg') no-repeat 50% 0% / 100% auto;
+	padding: 128px 0;
+
+	&:before {
+		content: '';
+		width: 498px;
+		height: 714px;
+		position: absolute;
+		top: -170px;
+		right: -159px;
+		background: --my-url-lines() no-repeat 0 0 / 100% auto;
+	}
+
+	&__title {
+		font-size: 60px;
+		line-height: 1;
+		letter-spacing: -0.04em;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		font-size: 28px;
+		line-height: 1;
+	}
+
+}

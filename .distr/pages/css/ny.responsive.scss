@@ -1,0 +1,17 @@
+/***********/
+/* Common */
+@import 'common/_responsive';
+
+/***********/
+/* Blocks */
+@import 'header/_responsive';
+@import 'main/_responsive';
+@import '@ny/events/_responsive';
+@import '@ny/about/_responsive';
+@import 'bottom/_responsive';
+@import '@ny/bottom/_responsive';
+@import 'footer/_responsive';
+
+/***********/
+/* Popups */
+@import 'popups/_responsive';

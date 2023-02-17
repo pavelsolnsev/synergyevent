@@ -1,0 +1,101 @@
+.main {
+
+	@include media-tablet() {
+		min-height: 667px;
+		background-position: 50% 50%;
+		background-size: cover;
+		padding-top: 324px;
+
+		.page-main & {
+			background: --my-bg-circle(16% 29vw, 594px, $width-tablet, 160), --my-bg-circle(11% -15vw, 654px, $width-tablet, 10), --my-bg-circle(92% 10.2vw, 594px, $width-tablet, 60);
+			padding: 128px 0 199px;
+		}
+
+		&__images {
+			gap: 28px;
+			margin: 0 -25px -32px -22px;
+
+			&-item {
+					&:after {
+					$size: 31px;
+					width: $size;
+					height: $size;
+				}
+
+				&_1:after { top: 85px; left: 218px; }
+				&_3:after { top: 139px; left: 217px; }
+			} // &-item
+		} // &__images
+
+		&__title {
+			font-size: 91.5529px;
+			letter-spacing: -0.03em;
+		}
+
+		&__subtitle {
+			font-size: 41.4865px;
+		}
+
+		&__marquee {
+			font-size: 40.5448px;
+			margin-top: 3px;
+
+			&-items {
+				background: none;
+			}
+
+			.icon-plus {
+				font-size: 34px;
+				margin: 0 10px 10px;
+			}
+		} // &__marquee
+
+	} // tablet
+
+
+	@include media-desktop() {
+		min-height: 1021px;
+		padding-top: 500px;
+
+		.page-main & {
+			background: --my-bg-circle(16% 29vw, 594px, $width-tablet, 160), --my-bg-circle(11% -15vw, 654px, $width-tablet, 10), --my-bg-circle(92% 10.2vw, 594px, $width-tablet, 60);
+			padding: 138px 0 305px;
+		}
+
+		&__images {
+			gap: 51px;
+			margin: 0 -182px -107px;
+
+			&-item {
+					&:after {
+					$size: 48px;
+					width: $size;
+					height: $size;
+				}
+
+				&_1:after { top: 186px; left: 480px; }
+				&_3:after { top: 270px; left: 295px; }
+			} // &-item
+		} // &__images
+
+		&__title {
+			font-size: 140px;
+		}
+
+		&__subtitle {
+			font-size: 56px;
+		}
+
+		&__marquee {
+			font-size: 62px;
+			margin-top: 5px;
+
+			.icon-plus {
+				font-size: 52px;
+				margin: 0 20px 10px;
+			}
+		} // &__marquee
+
+	} // desktop
+
+}

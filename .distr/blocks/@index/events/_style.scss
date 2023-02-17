@@ -1,0 +1,77 @@
+.events {
+	color: white;
+	background: black;
+	padding-top: 90px;
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px 0;
+	}
+
+	&__card {
+		$card: &;
+		$w: 263px;
+		width: $w;
+
+		&-header {
+			height: $w;
+			position: relative;
+			text-align: center;
+			border-radius: 50%;
+			padding-top: 45px;
+
+			#{$card}_1 & { background: --my-bg-circle(0 0, 100%, $width-mobile, 60), rgba(61,61,61,0.4); }
+			#{$card}_2 & { background: --my-bg-circle(0 0, 100%, $width-mobile, -60), rgba(61,61,61,0.4); }
+			#{$card}_3 & { background: --my-bg-circle(0 0, 100%, $width-mobile, 0), rgba(61,61,61,0.4); }
+			#{$card}_4 & { background: --my-bg-circle(0 0, 100%, $width-mobile, 20), rgba(61,61,61,0.4); }
+		} // &-header
+
+		&-title {
+			font-size: 36.6211px;
+			line-height: 1;
+		}
+
+		&-img {
+			position: absolute;
+			bottom: -31px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				background: --my-bg-dot(0 0, cover);
+			}
+
+			#{$card}_1 & {
+				max-width: 132px;
+				&:before { top: 60%; left: 67%; }
+			}
+			#{$card}_2 & {
+				max-width: 147px;
+				&:before { top: 32%; left: 8%; }
+			}
+			#{$card}_3 & {
+				max-width: 179px;
+				&:before { top: 55%; left: 52%; }
+			}
+			#{$card}_4 & {
+				max-width: 175px;
+				&:before { top: 58%; left: 25%; width: 32px; height: 32px; }
+			}
+		} // &-img
+
+		&-text {
+			font-size: 15.6948px;
+			line-height: (18/16);
+			text-transform: uppercase;
+			margin-top: 59px;
+		}
+	} // &__card
+
+}

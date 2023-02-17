@@ -1,0 +1,14 @@
+<svg width="500" height="716" viewBox="0 0 500 716" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<path d="M 500 0 L 0 358" stroke-width="0.65" stroke="#656262" fill="none" id="path1" vector-effect="non-scaling-stroke"/>
+	<path d="M 500 716 L 0 358" stroke-width="0.65" stroke="#656262" fill="none" id="path2" vector-effect="non-scaling-stroke"/>
+
+	<path d="M 389 80 L 500 0" stroke="#FFFFFF" stroke-width="1.31" transform="translate(-431, -50)" id="line1" vector-effect="non-scaling-stroke"/>
+	<path d="M 391 638 L 500 716" stroke="#FFFFFF" stroke-width="1.31" transform="translate(-431, -666)" id="line2" vector-effect="non-scaling-stroke"/>
+
+	<animateMotion xlink:href="#line1" dur="7s" begin="0s" fill="freeze" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1">
+		<mpath xlink:href="#path1"/>
+	</animateMotion>
+	<animateMotion xlink:href="#line2" dur="7s" begin="0s" fill="freeze" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1">
+		<mpath xlink:href="#path2"/>
+	</animateMotion>
+</svg>

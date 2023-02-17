@@ -1,0 +1,51 @@
+.slick {
+
+	@include media-tablet() {
+
+		&-dots {
+			$mt: 15px;
+			margin: 45px-$mt 0 0;
+
+			li {
+				padding: 0 7px;
+			}
+
+			button {
+				width: 50px;
+				height: 28px;
+				margin: $mt 0 0;
+			}
+		} // &-dots
+
+	} // tablet
+
+
+	@include media-desktop() {
+
+		&-dots {
+			$mt: 15px;
+			margin: 91px-$mt 0 0;
+
+			li {
+				padding: 0 16px;
+			}
+
+			button {
+				width: 94px;
+				height: 52px;
+				margin: $mt 0 0;
+			}
+		} // &-dots
+
+		&-arrow {
+			font-size: 95px;
+			margin-bottom: 85px;
+		}
+
+		&-prev {
+			margin-right: 25px;
+		}
+
+	} // desktop
+
+}

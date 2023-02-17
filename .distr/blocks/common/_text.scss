@@ -1,0 +1,71 @@
+.tt { font-family: $tt_commons; }
+
+.fw-light { font-weight: 300; }
+.fw-normal { font-weight: normal; }
+.fw-medium { font-weight: 500; }
+.fw-bold { font-weight: bold; }
+.fw-sbold { font-weight: 700; }
+.fw-xbold { font-weight: 800; }
+.fw-black { font-weight: 900; }
+
+.sup {
+	vertical-align: super;
+}
+
+.text-gradient {
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent;
+	background-size: 0 0 !important;
+	-webkit-background-size: contain !important;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h2 {
+	font-size: 60.1633px;
+	line-height: 1;
+	margin-bottom: 50px;
+}
+
+h3 {
+	font-size: 42px;
+	line-height: 1;
+}
+
+
+@include media-tablet() {
+
+	h2 {
+	} // h2
+
+	h3 {
+		font-size: 60px;
+	}
+
+} // tablet
+
+
+@include media-desktop() {
+
+	h2 {
+		font-size: 92px;
+		margin-bottom: 85px;
+	} // h2
+
+	h3 {
+		font-size: 92px;
+	}
+
+} // desktop
+
+
+/* Lists */
+.list {
+	&-dashed {
+		@include list-dashed;
+	}
+
+	&-dotted {
+		@include list-dotted;
+	}
+}

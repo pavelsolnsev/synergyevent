@@ -1,0 +1,63 @@
+.events {
+	color: white;
+	background: $grey url('../img/@ny/events/bg.jpg') no-repeat 50% 25% / 100% auto;
+	padding: 195px 0 137px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__card {
+		$card: &;
+		$size: 340px;
+		width: $size;
+		height: $size;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 36px;
+		line-height: 1;
+		border-radius: 50%;
+		padding: 0 12%;
+		margin-top: -40px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			$size-2: 31px;
+			width: $size-2;
+			height: $size-2;
+			background: $red;
+			border-radius: 50%;
+		}
+
+		&_1 {
+			background: --my-bg-circle(0 0, 100%, $width-mobile, 160), rgba(24,24,24,0.8);
+			margin-top: 0 !important;
+
+			&:before { top: 32px; left: 0; }
+		}
+
+		&_2 {
+			background: --my-bg-circle(0 0, 100%, $width-mobile, 20), rgba(24,24,24,0.8);
+
+			&:before { top: 221px; left: 83px; }
+		}
+
+		&_3 {
+			background: --my-bg-circle(0 0, 100%, $width-mobile, 190), rgba(24,24,24,0.8);
+
+			&:before { top: 58px; left: 288px; }
+		}
+	} // &__card
+
+}

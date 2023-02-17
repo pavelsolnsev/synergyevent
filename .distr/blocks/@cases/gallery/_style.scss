@@ -1,0 +1,40 @@
+.gallery {
+	color: white;
+
+	&__card {
+		$card: &;
+		overflow: hidden;
+
+		.slick-initialized & {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&[data-groupby="2"] {
+			max-width: 320px;
+
+			#{$card}-img {
+				height: 50%;
+			}
+		} // &[data-groupby="2"]
+
+		&[data-groupby="4"] {
+			max-width: 204px;
+
+			#{$card}-img {
+				height: 25%;
+			}
+		} // &[data-groupby="4"]
+
+		&-img {
+			opacity: 1 !important;
+		}
+
+		img {
+			min-height: 100%;
+			object-fit: cover;
+		}
+
+	} // &-card
+
+}

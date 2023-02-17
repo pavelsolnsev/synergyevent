@@ -1,0 +1,80 @@
+.stats {
+	text-align: center;
+	color: white;
+	background: black url('../img/@cases/stats/bg.jpg') no-repeat 50% 50% / 100% auto;
+	padding: 177px 0 144px;
+
+	&__title {
+		margin-bottom: 0;
+	}
+
+	&__subtitle {
+		font-size: 28px;
+		line-height: 1;
+		margin-bottom: 30px;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__item {
+		$size: 320px;
+		width: $size;
+		height: $size;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 14.82px;
+		line-height: (17/15);
+		text-transform: uppercase;
+		border-radius: 999px;
+		padding: 0 15px;
+		margin-top: -54px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			$size-2: 24px;
+			width: $size-2;
+			height: $size-2;
+			background: $red;
+			border-radius: 50%;
+		}
+
+		&_1 {
+			margin-top: 0 !important;
+		}
+
+		&_odd {
+			background: --my-bg-circle(0 0, 100%, null, -60), rgba(24,24,24,0.8);
+
+			&:before { top: (70px / $size) * 100%; left: (62px / $size) * 100%; }
+		} // &_odd
+
+		&_even {
+			background: --my-bg-circle(0 0, 100%, null, 60), rgba(24,24,24,0.8);
+
+			&:before { top: (210px / $size) * 100%; left: (255px / $size) * 100%; }
+		} // &_even
+
+		&-num {
+			white-space: nowrap;
+			font-size: 90px;
+			line-height: 0.6;
+			&-smaller {
+				font-size: 50%;
+				line-height: 0.9;
+			}
+		}
+		&-number {
+			display: block;
+			font-size: 90px;
+		}
+	} // &__item
+
+}

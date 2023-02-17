@@ -1,0 +1,65 @@
+.events {
+
+	@include media-tablet() {
+		background-image: url('../img/@ny/events/bg_t.jpg');
+		padding: 180px 0 196px;
+
+		&__title {
+			margin-bottom: 100px;
+		}
+
+		&__cards {
+			flex-direction: row;
+			justify-content: center;
+			margin: 0 -62px;
+		}
+
+		&__card {
+			$size: 412px;
+			width: $size;
+			height: $size;
+			padding: 0 7%;
+			margin: 0 -29px;
+
+			&_1:before { top: 106px; left: 92px; }
+			&_2:before { top: 264px; left: 136px; }
+			&_3:before { top: 122px; left: 290px; }
+		} // &__card
+
+	} // tablet
+
+
+	@include media-desktop() {
+		background-image: url('../img/@ny/events/bg_d.jpg');
+		padding: 277px 0 300px;
+
+		&__title {
+			margin-bottom: 150px;
+		}
+
+		&__cards {
+			margin: 0;
+		}
+
+		&__card {
+			flex: 0 0 auto;
+			$size: 631px;
+			width: $size;
+			height: $size;
+			font-size: 56px;
+			padding: 0 5%;
+			margin: 0 -40px;
+
+			&:before {
+				$size-2: 48px;
+				width: $size-2;
+				height: $size-2;
+			}
+			&_1:before { top: 162px; left: 141px; }
+			&_2:before { top: 404px; left: 209px; }
+			&_3:before { top: 186px; left: 443px; }
+		} // &__card
+
+	} // desktop
+
+}

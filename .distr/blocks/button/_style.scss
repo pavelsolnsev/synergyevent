@@ -1,0 +1,74 @@
+.button {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 120%;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	border: 0;
+	cursor: pointer;
+
+	@include ie11-align-center-fix;
+
+	&[disabled] {
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+		cursor: not-allowed;
+		isolation: isolate; // fix for Safari mix-blend-mode
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			background: rgba(0, 0, 0, 0.9);
+			mix-blend-mode: saturation;
+			// background: rgba(255, 255, 255, 0.3);
+			// mix-blend-mode: color-dodge;
+		}
+	} // &[disabled]
+
+	&_red {
+		color: #FFF !important;
+		background: red;
+	}
+
+	&_more {
+		width: 98px;
+		height: 98px;
+		display: flex;
+		font-size: 40px;
+		border: 1px solid $red;
+		border-radius: 50%;
+		margin: 56px auto 0;
+	}
+
+	&_brief {
+		width: auto;
+		border: 0;
+		border-radius: 50%;
+		background: none;
+		font-size: 98px;
+		line-height: 0;
+		transition: 0.3s;
+
+		&:hover, &:focus {
+			transform: rotate3d(0,0,1,90deg);
+		}
+
+		@include media-tablet() {
+			font-size: 126px;
+		} // tablet
+
+		@include media-desktop() {
+			font-size: 193px;
+		} // desktop
+	} // &_brief
+
+}

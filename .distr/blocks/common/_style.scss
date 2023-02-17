@@ -1,0 +1,114 @@
+@import '_variables';
+
+
+/**********/
+/* Fonts */
+
+@import 'fonts/_style';
+
+
+/*************/
+/* Defaults */
+body {
+	min-width: $width-mobile;
+	color: black;
+	font-family: $tt_commons;
+	font-size: 13.079px;
+	line-height: (15/13);
+	letter-spacing: -0.04em;
+	background: black;
+	transition: none;
+}
+
+select,
+textarea,
+input,
+a:focus,
+a:hover,
+a {
+	color: inherit;
+	transition: 0.3s;
+	outline: 0;
+}
+a:hover {
+	opacity: 0.9;
+}
+
+[href^="tel:"] {
+	white-space: nowrap;
+}
+
+img {
+	max-width: 100%;
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+	letter-spacing: inherit;
+}
+
+::placeholder {
+	color: inherit;
+	text-transform: uppercase;
+}
+
+source {
+	display: none;
+}
+
+label.error {
+	display: none !important;
+}
+
+.widget-form-privacy {
+	display: none !important;
+}
+
+
+/* ******* */
+/* Layout */
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: ((320px + 30) / $width-mobile) * 100%;
+}
+
+
+/***********/
+/* Blocks */
+
+[data-more-hidden] {
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+
+
+/***********/
+/* Common */
+
+/* Text common styles */
+@import '_text';
+
+/* Lazy load */
+@import 'lazy/_style';
+
+/* Icons */
+@import 'icon/_style';
+
+/* Buttons */
+@import 'button/_style';
+
+/* Forms */
+@import 'form/_style';
+
+/* Carousel */
+@import 'slick/_style';
+
+/* Fancybox */
+@import 'fancybox/_style';

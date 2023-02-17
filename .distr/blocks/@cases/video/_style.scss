@@ -1,0 +1,40 @@
+.video {
+	height: 564px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: no-repeat 50% 50% / cover;
+
+	&__link {
+		$size: 320px;
+		width: $size;
+		height: $size;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: $red !important;
+		font-size: 14.8166px;
+		line-height: (17/15);
+		text-transform: uppercase;
+		border-radius: 50%;
+		background: --my-bg-circle(0 0, 100%, 1, 160), rgba(24,24,24,0.8);
+		padding-top: 42px;
+		margin: auto;
+	}
+
+	&__button {
+		$size-2: 84px;
+		width: $size-2;
+		height: $size-2;
+		background: $red;
+		border-radius: 50%;
+		font-size: 26px;
+		padding-left: 10px;
+		margin-bottom: 14px;
+	} // &__button
+
+}

@@ -1,0 +1,27 @@
+.popup {
+	max-width: 360px;
+	color: white;
+	background: none;
+	padding: 7px 20px 52px;
+
+	&__logo {
+		margin-bottom: 60px;
+	}
+
+	.form {
+		&__title {
+			font-size: 42px;
+			line-height: (48/42);
+			margin-bottom: 6px;
+		}
+
+		&__items {
+			gap: 26px;
+		}
+
+		&__input {
+			min-height: 35px;
+		}
+	} // .form
+
+}

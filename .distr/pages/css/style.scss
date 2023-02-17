@@ -1,0 +1,20 @@
+/***********/
+/* Common */
+@import 'common/_style';
+
+/***********/
+/* Blocks */
+@import 'header/_style';
+@import 'main/_style';
+@import '@index/about/_style';
+@import '@index/events/_style';
+@import '@index/cases/_style';
+@import '@index/stats/_style';
+@import '@index/partners/_style';
+@import '@index/awards/_style';
+@import 'bottom/_style';
+@import 'footer/_style';
+
+/***********/
+/* Popups */
+@import 'popups/_style';

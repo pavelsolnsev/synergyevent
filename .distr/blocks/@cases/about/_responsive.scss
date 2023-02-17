@@ -1,0 +1,47 @@
+.about {
+
+	@include media-tablet() {
+		background-image: url('../img/@cases/about/bg_t.jpg');
+		background-position: 50% 0;
+		padding: 178px 0;
+
+		&:before {
+			width: 539px;
+			height: 772px;
+			bottom: auto;
+			top: 0;
+		}
+
+		&__title {
+			font-size: 68px;
+		}
+
+		&__text {
+			font-size: 36px;
+		}
+
+	} // tablet
+
+
+	@include media-desktop() {
+		background-image: url('../img/@cases/about/bg_d.jpg');
+		padding: 272px 0;
+
+		&:before {
+			width: 825px;
+			height: 1181px;
+			right: 0;
+		}
+
+		&__title {
+			font-size: 92px;
+			margin-bottom: 40px;
+		}
+
+		&__text {
+			font-size: 56px;
+		}
+
+	} // desktop
+
+}

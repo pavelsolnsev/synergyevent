@@ -1,0 +1,78 @@
+.awards {
+	color: white;
+	background: black;
+	padding: 132px 0 104px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	&__cards {
+		max-width: $width-mobile;
+		padding-top: 110px;
+		margin: 0 auto;
+	}
+
+	&__card {
+		$card: &;
+		max-width: 155px;
+		min-height: 166px;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+
+		&_2,
+		&_4,
+		&_6 {
+			margin-left: auto;
+		}
+
+		&_4,
+		&_5 {
+			margin-bottom: 0;
+		}
+		&_3,
+		&_6 {
+			margin-bottom: 20px;
+		}
+
+		&_7 {
+			.awards__card-img-mobile {
+				width: 150px;
+			}
+		}
+
+		&:before {
+			content: '';
+			width: 319px;
+			height: 319px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%,-50%,0);
+			z-index: -1;
+		}
+
+		&_1:before { background: --my-bg-circle(0 0, 100%, $width-mobile, 80, #3D3D3D66, #656262); }
+		&_2:before { background: --my-bg-circle(0 0, 100%, $width-mobile, -65, #3D3D3D66, #656262); }
+		&_3:before { background: --my-bg-circle(0 0, 100%, $width-mobile, -30, #3D3D3D66, #656262); }
+		&_4:before { background: --my-bg-circle(0 0, 100%, $width-mobile, 110, #3D3D3D66, #656262); }
+		&_5:before { background: --my-bg-circle(0 0, 100%, $width-mobile, 80, #3D3D3D66, #656262); }
+		&_6:before { background: --my-bg-circle(0 0, 100%, $width-mobile, -65, #3D3D3D66, #656262); }
+		&_7:before { background: --my-bg-circle(0 0, 100%, $width-mobile, -30, #3D3D3D66, #656262); }
+
+		&-img {
+			margin-bottom: 27px;
+
+			&-desktop {
+				display: none;
+			}
+		} // &-img
+
+		&-text {
+		}
+	} // &__card
+
+}

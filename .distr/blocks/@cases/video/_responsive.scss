@@ -1,0 +1,44 @@
+.video {
+
+	@include media-tablet() {
+		height: 740px;
+
+		&__link {
+			$size: 420px;
+			width: $size;
+			height: $size;
+		}
+
+		&__button {
+			$size-2: 90px;
+			width: $size-2;
+			height: $size-2;
+			font-size: 37px;
+			margin-bottom: 18px;
+		}
+
+	} // tablet
+
+
+	@include media-desktop() {
+		height: 1132px;
+
+		&__link {
+			$size: 642px;
+			width: $size;
+			height: $size;
+			font-size: 20px;
+		}
+
+		&__button {
+			$size-2: 138px;
+			width: $size-2;
+			height: $size-2;
+			font-size: 57px;
+			padding-left: 20px;
+			margin-bottom: 28px;
+		}
+
+	} // desktop
+
+}

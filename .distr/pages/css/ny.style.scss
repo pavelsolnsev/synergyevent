@@ -1,0 +1,17 @@
+/***********/
+/* Common */
+@import 'common/_style';
+
+/***********/
+/* Blocks */
+@import 'header/_style';
+@import 'main/_style';
+@import '@ny/events/_style';
+@import '@ny/about/_style';
+@import 'bottom/_style';
+@import '@ny/bottom/_style';
+@import 'footer/_style';
+
+/***********/
+/* Popups */
+@import 'popups/_style';

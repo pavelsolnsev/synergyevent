@@ -1,0 +1,15 @@
+/* Breakpoints */
+$width-mobile: 360px;
+$width-mobile-2: 576px;
+$width-tablet: 992px;
+$width-desktop: 1920px;
+
+/* Fonts */
+$tt_commons: 'TT Commons', 'Helvetica Neue', Helvetica, sans-serif;
+
+/* Colors */
+$grey: #181818;
+$red: #FF0B0B;
+
+@import '_mixins';
+@import '_functions';

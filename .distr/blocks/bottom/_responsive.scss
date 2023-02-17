@@ -1,0 +1,91 @@
+.bottom {
+
+	@include media-tablet() {
+		background: --my-bg-circle(77% 31vw, 365px, $width-tablet, 160), --my-bg-circle(80% 4vw, 402px, $width-tablet, 10), --my-bg-circle(107% 20vw, 365px, $width-tablet, 60), url('../img/bottom/bg_t.jpg') no-repeat 50% 0% / 100% auto, $grey;
+		padding-top: 171px;
+
+		&__title {
+			text-align: left;
+			margin-bottom: 15px;
+		}
+
+		&__form {
+			max-width: 56.8%;
+		}
+
+		.form {
+			&__items {
+				grid-template-columns: 1fr 1fr;
+				gap: 30px 7px;
+			}
+
+			&__footer,
+			&__item_wide {
+				grid-column: 1 / 3;
+			}
+		} // .form
+
+		&__contacts {
+			display: flex;
+			align-items: center;
+			gap: 0 58px;
+			padding-top: 77px;
+
+			&-phone {
+				font-size: 60.1633px;
+				margin-bottom: 0;
+			} // &-phone
+
+			&-email {
+				max-width: 30%;
+				font-size: 30px;
+				margin: 0;
+			}
+
+			&-address {
+				min-width: 159px;
+			}
+		} // &__contacts
+
+	} // tablet
+
+
+	@include media-desktop() {
+		background: --my-bg-circle(85% 25vw, 559px, $width-desktop, 160), --my-bg-circle(86% 4vw, 615px, $width-desktop, 10), --my-bg-circle(105% 16vw, 559px, $width-desktop, 60), url('../img/bottom/bg_d.jpg') no-repeat 50% 0% / auto, $grey;
+		padding-top: 262px;
+
+		&__title {
+			margin-bottom: 23px;
+		}
+
+		&__form {
+			max-width: 57.4%;
+		}
+
+		.form {
+			&__items {
+				gap: 47px 12px;
+			}
+		} // .form
+
+		&__contacts {
+			gap: 0 120px;
+			padding-top: 118px;
+
+			&-phone {
+				font-size: 92px;
+				margin-bottom: 0;
+			} // &-phone
+
+			&-email {
+				font-size: 56px;
+			}
+
+			&-address {
+				min-width: 243px;
+			}
+		} // &__contacts
+
+	} // desktop
+
+}

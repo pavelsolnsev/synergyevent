@@ -1,0 +1,20 @@
+/* TT Commons */
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Light'), local('TTCommons-Light'),
+	url('fonts/ttcommons-light.woff2') format('woff2'),
+	url('fonts/ttcommons-light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Commons';
+	src: local('TT Commons Regular'), local('TTCommons-Regular'),
+	url('fonts/ttcommons-regular.woff2') format('woff2'),
+	url('fonts/ttcommons-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

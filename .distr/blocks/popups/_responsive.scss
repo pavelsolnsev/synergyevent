@@ -1,0 +1,13 @@
+.popup {
+
+	@include media-tablet() {
+		max-width: 680px;
+		padding: 30px;
+	} // tablet
+
+
+	@include media-desktop() {
+		padding: 50px;
+	} // desktop
+
+}

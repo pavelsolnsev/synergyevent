@@ -1,0 +1,147 @@
+.header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	color: white;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin: 0 auto;
+	transition: 0.3s;
+	transition-property: padding-top, padding-bottom, background;
+
+	.page-main & {
+		background: black;
+	}
+
+	.page-scrolled & {
+		background: black;
+		box-shadow: 0 0 20px #222;
+	}
+
+	* {
+		transition: 0.3s;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		max-width: 82px;
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		opacity: 1 !important;
+		margin-right: auto;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: black;
+			z-index: -1;
+		}
+
+		&[href=""] {
+			cursor: default;
+		}
+	} // &__logo
+
+	&__phone {
+		@media (max-width: $width-tablet - 1) {
+			font-size: 0;
+
+			:before {
+				font-size: 25px;
+			}
+		} // tablet
+	} // &__phone
+
+	&__button-menu {
+		flex-basis: 0;
+		font-size: 17px;
+		margin-left: 10px;
+	}
+
+	&__menu {
+		@media (max-width: $width-tablet - 1) {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			font-size: 42px;
+			line-height: 200%;
+			background: rgba(0,0,0,0.9);
+			transform: translate3d(200%, 0, 0);
+			transition: 0.3s;
+			padding: 15px;
+
+			.page-menu-opened & {
+				transform: translate3d(0, 0, 0);
+			}
+
+			&-item {
+				display: block;
+				padding: 6px 0;
+			}
+		} // tablet
+	} // &__menu
+
+	.icon-menu {
+		opacity: 1;
+
+		.page-menu-opened & {
+			opacity: 0;
+			position: absolute;
+			left: -9999px;
+		}
+	} // .icon-menu
+
+	.icon-close {
+		position: absolute;
+		left: -9999px;
+		opacity: 0;
+		z-index: 2;
+
+		.page-menu-opened & {
+			opacity: 1;
+			position: static;
+		}
+	} // .icon-close
+
+	&__button-popup {
+		@media (max-width: $width-tablet - 1) {
+			max-width: 320px;
+			min-height: 38px;
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 25px;
+			box-shadow: 0 0 5px #222;
+			transform: translate3d(0, 200%, 0);
+			margin: 0 auto;
+
+			.page-scrolled-main & {
+				transform: translate3d(0, 0, 0);
+			}
+
+			.page-scrolled-on-form-1 & {
+				transform: translate3d(0, 200%, 0);
+			}
+		} // 991
+	} // &__button-popup
+
+}

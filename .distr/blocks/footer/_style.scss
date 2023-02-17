@@ -1,0 +1,31 @@
+.footer {
+	color: white;
+	background: $grey;
+	padding: 86px 0 93px;
+
+	&__logo {
+		max-width: 44px;
+		margin-bottom: 17px;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 0 23px;
+	}
+
+	.icon {
+		&-fb { font-size: 8.61px; }
+		&-ig { font-size: 14.72px; }
+	}
+
+	&__meta {
+		color: #656262;
+		text-transform: uppercase;
+
+		a {
+			text-decoration: underline;
+		}
+	} // &__meta
+
+}

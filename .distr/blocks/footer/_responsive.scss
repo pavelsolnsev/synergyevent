@@ -1,0 +1,54 @@
+.footer {
+
+	@include media-tablet() {
+		padding: 84px 0 99px;
+
+		&__logo {
+			max-width: 56px;
+			margin: 0;
+		}
+
+		&__links {
+			gap: 0 30px;
+
+			&-col {
+				order: 3;
+			}
+		}
+
+		.icon {
+			&-fb { font-size: 11.06px; }
+			&-ig { font-size: 18.9px; }
+		}
+
+		&__meta {
+			display: flex;
+			gap: 0 20px;
+		}
+
+	} // tablet
+
+
+	@include media-desktop() {
+		padding: 129px 0 151px;
+
+		&__logo {
+			max-width: 86px;
+		}
+
+		&__links {
+			gap: 0 46px;
+		}
+
+		.icon {
+			&-fb { font-size: 16.92px; }
+			&-ig { font-size: 28.9px; }
+		}
+
+		&__meta {
+			gap: 0 30px;
+		}
+
+	} // desktop
+
+}

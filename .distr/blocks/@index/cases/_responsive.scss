@@ -1,0 +1,61 @@
+.cases {
+
+	@include media-tablet() {
+		padding: 177px 0 194px;
+
+		&__cards {
+			display: block;
+			margin: 0 -6px 0 -16px;
+		}
+
+		.slick {
+			&-list {
+			}
+
+			&-track {
+				gap: 0 20px;
+			}
+		}
+
+		[data-more-hidden] {
+			position: relative;
+			left: 0;
+			opacity: 1;
+		}
+
+		&__card {
+			min-height: 475px;
+			padding-top: 98px;
+
+			&-button {
+				margin-top: 17px;
+			}
+		} // &__card
+
+		&__button-more {
+			display: none;
+		}
+
+	} // tablet
+
+
+	@include media-desktop() {
+		padding: 270px 0 197px;
+
+		&__card {
+			min-height: 726px;
+			padding-top: 150px;
+
+			&-title {
+				font-size: 56px;
+			}
+
+			&-button {
+				font-size: 58px;
+				margin-top: 24px;
+			}
+		} // &__card
+
+	} // desktop
+
+}

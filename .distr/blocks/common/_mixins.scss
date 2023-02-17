@@ -1,0 +1,85 @@
+/* Костыли для IE11 */
+// @include ie11-align-center-fix;
+@mixin ie11-align-center-fix {
+	_:-ms-fullscreen, &:after {
+		content: '';
+		min-height: inherit;
+		font-size: 0;
+	}
+}
+
+// @include ie11-min-height-fix;
+@mixin ie11-min-height-fix {
+	_:-ms-fullscreen, & {
+		height: 100%;
+	}
+}
+
+
+/* Списки */
+// @include list-dashed;
+@mixin list-dashed {
+	list-style: none;
+	padding-left: 0;
+	li {
+		position: relative;
+		padding-left: 1.5em;
+		&:before {
+			content: '—';
+			position: absolute;
+			left: 0;
+		}
+	}
+}
+
+// @include list-dotted;
+@mixin list-dotted {
+	list-style: none;
+	padding-left: 0;
+	li {
+		position: relative;
+		padding-left: 1em;
+		&:before {
+			content: '•';
+			position: absolute;
+			left: 0;
+			top: -5%;
+			font-size: 101%;
+		}
+	}
+}
+
+
+/* Скрытый скроллбар */
+// @include hide-scrollbar;
+@mixin hide-scrollbar {
+	overflow: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* FF */
+	&::-webkit-scrollbar { /* Chrome, Safari, Opera */
+		display: none;
+	}
+}
+
+
+/* Media-брейкпоинты */
+// @include media-mobile-2() {}
+@mixin media-mobile-2() {
+	@media (min-width: $width-mobile-2) {
+		@content;
+	}
+}
+
+// @include media-tablet() {}
+@mixin media-tablet() {
+	@media (min-width: $width-tablet) {
+		@content;
+	}
+}
+
+// @include media-desktop() {}
+@mixin media-desktop() {
+	@media (min-width: $width-desktop) {
+		@content;
+	}
+}

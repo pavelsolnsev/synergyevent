@@ -1,0 +1,12 @@
+.bottom {
+
+	@include media-tablet() {
+		background: --my-bg-circle(77% 31vw, 365px, $width-tablet, 160), --my-bg-circle(80% 4vw, 402px, $width-tablet, 10), --my-bg-circle(107% 20vw, 365px, $width-tablet, 60), url('../img/@ny/bottom/bg_t.jpg') no-repeat 50% 0% / 100% auto, $grey;
+	} // tablet
+
+
+	@include media-desktop() {
+		background: --my-bg-circle(85% 25vw, 559px, $width-desktop, 160), --my-bg-circle(86% 4vw, 615px, $width-desktop, 10), --my-bg-circle(105% 16vw, 559px, $width-desktop, 60), url('../img/@ny/bottom/bg_d.jpg') no-repeat 50% 0% / 100% auto, $grey;
+	} // desktop
+
+}

@@ -1,0 +1,130 @@
+.header {
+
+	@include media-tablet() {
+		background: none;
+		padding-top: 26px;
+		padding-bottom: 26px;
+
+		.compensate-for-scrollbar & {
+			padding-right: 17px;
+		}
+
+		.page-main & {
+			background: none;
+		}
+
+		.page-scrolled & {
+			background: #000;
+			padding-top: 13px;
+			padding-bottom: 13px;
+		}
+
+		&__logo {
+			margin-right: 27px;
+
+			&:before {
+				content: none;
+			}
+		} // &__logo
+
+		&__phone {
+			position: relative;
+			z-index: 2;
+			margin: 0 13px 0 auto;
+
+			:before {
+				content: none;
+			}
+		} // &__phone
+
+		&__menu {
+			display: flex;
+			gap: 10px;
+			font-size: 130%;
+			text-transform: uppercase;
+		} // &__menu
+
+		&__button-popup {
+			$size: 95px;
+			$offset: -50px;
+			max-width: $size;
+			position: relative;
+			z-index: 1;
+			background: none;
+			padding: 0 10px;
+			margin-top: -10px;
+
+			&:before {
+				content: '';
+				width: $size;
+				height: $size;
+				position: absolute;
+				z-index: -1;
+				top: $offset;
+				left: 0;
+				background: --my-bg-dot(0 0, cover);
+			}
+
+			&:after {
+				content: '';
+				width: 203px;
+				height: 203px;
+				position: absolute;
+				top: -180%;
+				z-index: -1;
+				background: --my-bg-circle(0 0, 100%, $width-tablet, 60);
+				margin-top: $offset;
+
+				.page-main & {
+					content: none;
+				}
+			} // &:after
+		} // &__button-popup
+
+	} // tablet
+
+
+	@include media-desktop() {
+		padding-top: 39px;
+		padding-bottom: 39px;
+
+		.page-scrolled & {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		&__logo {
+			max-width: none;
+			margin-right: 42px;
+		}
+
+		&__menu {
+			gap: 20px;
+		}
+
+		&__button-popup {
+			$size: 145px;
+			$offset: -69px;
+			max-width: $size;
+			margin-top: -20px;
+
+			.page-scrolled & {
+				margin-top: -15px;
+			}
+
+			&:before {
+				width: $size;
+				height: $size;
+				top: $offset;
+			}
+
+			&:after {
+				width: 310px;
+				height: 310px;
+				margin-top: $offset;
+			}
+		} // &__button-popup
+
+	} // desktop
+
+}

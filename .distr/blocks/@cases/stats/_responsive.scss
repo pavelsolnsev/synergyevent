@@ -1,0 +1,94 @@
+.stats {
+
+	@include media-tablet() {
+		background-image: url('../img/@cases/stats/bg_t.jpg');
+		padding: 194px 0;
+
+		&__subtitle {
+			max-width: 860px;
+			font-size: 36px;
+			margin: 0 auto 61px;
+		}
+
+		&__items {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__item {
+			$size: 420px;
+			width: $size;
+			height: $size;
+			padding: 0;
+			margin: 0 -32px -32px;
+
+			&:before {
+				$size-2: 31px;
+				width: $size-2;
+				height: $size-2;
+			}
+
+			&-num {
+				&-smaller {
+					font-size: 60%;
+				}
+			}
+		} // &__item
+
+	} // tablet
+
+
+	@include media-desktop() {
+		background-image: url('../img/@cases/stats/bg_d.jpg');
+		padding: 296px 0;
+
+		&__subtitle {
+			max-width: 1260px;
+			font-size: 56px;
+			margin-bottom: 93px;
+		}
+
+		&__items {
+			gap: 32px 29px;
+		} // &__items
+
+		&__item {
+			$item: &;
+			$size: 712px;
+			width: $size;
+			height: $size;
+			font-size: 20px;
+			margin: 0;
+
+			&:before {
+				$size-2: 48px;
+				width: $size-2;
+				height: $size-2;
+			}
+
+			&_small {
+				$size: 464px;
+				width: $size;
+				height: $size;
+
+				&:before {
+					$size-2: 35px;
+					width: $size-2;
+					height: $size-2;
+				}
+			} // &_small
+
+			&-num {
+				font-size: 160px;
+
+				#{$item}_small & {
+					font-size: 120px;
+				}
+			} 
+			// &-num
+		} // &__item
+
+	} // desktop
+
+}

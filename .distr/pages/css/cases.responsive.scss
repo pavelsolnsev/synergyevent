@@ -1,0 +1,19 @@
+/***********/
+/* Common */
+@import 'common/_responsive';
+
+/***********/
+/* Blocks */
+@import 'header/_responsive';
+@import 'main/_responsive';
+@import '@cases/about/_responsive';
+@import '@cases/video/_responsive';
+@import '@cases/stats/_responsive';
+@import '@cases/gallery/_responsive';
+@import '@cases/cases/_responsive';
+@import 'bottom/_responsive';
+@import 'footer/_responsive';
+
+/***********/
+/* Popups */
+@import 'popups/_responsive';

@@ -1,0 +1,32 @@
+.gallery {
+
+	@include media-tablet() {
+
+		&__container {
+			max-width: none;
+			padding: 0;
+		}
+
+		.slick-track {
+			justify-content: center;
+		}
+
+		&__card {
+			width: auto !important;
+
+			&[data-groupby="2"] {
+				max-width: (377 / 992) * 100%;
+			}
+
+			&[data-groupby="4"] {
+				max-width: (240 / 992) * 100%;
+			}
+		} // &-card
+
+	} // tablet
+
+
+	@include media-desktop() {
+	} // desktop
+
+}
